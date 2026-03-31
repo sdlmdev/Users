@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+.groupManagement {
+	--group-gradient: #{$gradient-management};
+	--group-color: #{$color-accent};
+}
+
+.groupAccounting {
+	--group-gradient: #{$gradient-accounting};
+	--group-color: #{$color-success};
+}
+
+.groupHR {
+	--group-gradient: #{$gradient-hr};
+	--group-color: #{$color-warning};
+}
+
+.groupIT {
+	--group-gradient: #{$gradient-it};
+	--group-color: #{$color-info};
+}
+
+.groupMarketing {
+	--group-gradient: #{$gradient-marketing};
+	--group-color: #{$color-pink};
+}
+
+.groupUngrouped {
+	--group-gradient: #{$gradient-ungrouped};
+	--group-color: #{$color-text-inactive};
+}

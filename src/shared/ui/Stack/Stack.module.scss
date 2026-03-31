@@ -1,0 +1,475 @@
+.stack {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-cols, 1), 1fr);
+
+	@include tablet-sm {
+		grid-template-columns: repeat(var(--grid-cols-tablet, var(--grid-cols, 1)), 1fr);
+	}
+
+	@include mobile-sm {
+		grid-template-columns: repeat(
+			var(--grid-cols-mobile, var(--grid-cols-tablet, var(--grid-cols, 1))),
+			1fr
+		);
+	}
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.fullHeight {
+	height: 100%;
+}
+
+// Flex shortcuts
+.flex-1 {
+	flex: 1;
+}
+.flex-auto {
+	flex: auto;
+}
+.flex-none {
+	flex: none;
+}
+
+// Grow / Shrink
+.grow-0 {
+	flex-grow: 0;
+}
+.grow-1 {
+	flex-grow: 1;
+}
+.shrink-0 {
+	flex-shrink: 0;
+}
+.shrink-1 {
+	flex-shrink: 1;
+}
+
+// Wrap
+.wrap {
+	flex-wrap: wrap;
+}
+.nowrap {
+	flex-wrap: nowrap;
+}
+.wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.direction-row {
+	flex-direction: row;
+}
+
+.direction-column {
+	flex-direction: column;
+}
+
+.direction-row-reverse {
+	flex-direction: row-reverse;
+}
+
+.direction-column-reverse {
+	flex-direction: column-reverse;
+}
+
+@include tablet {
+	.directionTablet-row {
+		flex-direction: row;
+	}
+
+	.directionTablet-column {
+		flex-direction: column;
+	}
+
+	.directionTablet-row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.directionTablet-column-reverse {
+		flex-direction: column-reverse;
+	}
+}
+
+@include mobile {
+	.directionMobile-row {
+		flex-direction: row;
+	}
+
+	.directionMobile-column {
+		flex-direction: column;
+	}
+
+	.directionMobile-row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.directionMobile-column-reverse {
+		flex-direction: column-reverse;
+	}
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+$spacings: (
+	'0': 0,
+	'0-5': $spacing-0-5,
+	'1': $spacing-1,
+	'1-25': $spacing-1-25,
+	'1-5': $spacing-1-5,
+	'2': $spacing-2,
+	'2-5': $spacing-2-5,
+	'3': $spacing-3,
+	'3-5': $spacing-3-5,
+	'4': $spacing-4,
+	'5': $spacing-5,
+	'6': $spacing-6,
+	'8': $spacing-8,
+	'10': $spacing-10,
+	'12': $spacing-12,
+	'16': $spacing-16,
+	'20': $spacing-20,
+);
+
+@each $name, $value in $spacings {
+	// Gaps
+	.gap-#{$name} {
+		--grid-gap: #{$value};
+		gap: $value;
+	}
+
+	// Paddings
+	.p-#{$name} {
+		padding: $value;
+	}
+	.pt-#{$name} {
+		padding-top: $value;
+	}
+	.pr-#{$name} {
+		padding-right: $value;
+	}
+	.pb-#{$name} {
+		padding-bottom: $value;
+	}
+	.pl-#{$name} {
+		padding-left: $value;
+	}
+	.px-#{$name} {
+		padding-right: $value;
+		padding-left: $value;
+	}
+	.py-#{$name} {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+
+	// Margins base
+	.m-#{$name} {
+		margin: $value;
+	}
+	.mt-#{$name} {
+		margin-top: $value;
+	}
+	.mr-#{$name} {
+		margin-right: $value;
+	}
+	.mb-#{$name} {
+		margin-bottom: $value;
+	}
+	.ml-#{$name} {
+		margin-left: $value;
+	}
+	.mx-#{$name} {
+		margin-right: $value;
+		margin-left: $value;
+	}
+	.my-#{$name} {
+		margin-top: $value;
+		margin-bottom: $value;
+	}
+}
+
+// Auto margins
+.m-auto {
+	margin: auto;
+}
+.mt-auto {
+	margin-top: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.mb-auto {
+	margin-bottom: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+// Max Widths
+.maxW-tiny {
+	max-width: $container-tiny;
+}
+.maxW-xxs {
+	max-width: $container-xxs;
+}
+.maxW-xs {
+	max-width: $container-xs;
+}
+.maxW-sm {
+	max-width: $container-sm;
+}
+.maxW-md {
+	max-width: $container-md;
+}
+.maxW-lg {
+	max-width: $container-lg;
+}
+.maxW-max {
+	max-width: $container-max-width;
+}
+
+@include tablet {
+	@each $name, $value in $spacings {
+		.gap-tablet-#{$name} {
+			--grid-gap: #{$value};
+			gap: $value;
+		}
+
+		.p-tablet-#{$name} {
+			padding: $value;
+		}
+		.pt-tablet-#{$name} {
+			padding-top: $value;
+		}
+		.pr-tablet-#{$name} {
+			padding-right: $value;
+		}
+		.pb-tablet-#{$name} {
+			padding-bottom: $value;
+		}
+		.pl-tablet-#{$name} {
+			padding-left: $value;
+		}
+		.px-tablet-#{$name} {
+			padding-right: $value;
+			padding-left: $value;
+		}
+		.py-tablet-#{$name} {
+			padding-top: $value;
+			padding-bottom: $value;
+		}
+
+		.m-tablet-#{$name} {
+			margin: $value;
+		}
+		.mt-tablet-#{$name} {
+			margin-top: $value;
+		}
+		.mr-tablet-#{$name} {
+			margin-right: $value;
+		}
+		.mb-tablet-#{$name} {
+			margin-bottom: $value;
+		}
+		.ml-tablet-#{$name} {
+			margin-left: $value;
+		}
+		.mx-tablet-#{$name} {
+			margin-right: $value;
+			margin-left: $value;
+		}
+		.my-tablet-#{$name} {
+			margin-top: $value;
+			margin-bottom: $value;
+		}
+	}
+
+	.m-tablet-auto {
+		margin: auto;
+	}
+	.mt-tablet-auto {
+		margin-top: auto;
+	}
+	.mr-tablet-auto {
+		margin-right: auto;
+	}
+	.mb-tablet-auto {
+		margin-bottom: auto;
+	}
+	.ml-tablet-auto {
+		margin-left: auto;
+	}
+	.mx-tablet-auto {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.my-tablet-auto {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+@include mobile {
+	@each $name, $value in $spacings {
+		.gap-mobile-#{$name} {
+			--grid-gap: #{$value};
+			gap: $value;
+		}
+
+		.p-mobile-#{$name} {
+			padding: $value;
+		}
+		.pt-mobile-#{$name} {
+			padding-top: $value;
+		}
+		.pr-mobile-#{$name} {
+			padding-right: $value;
+		}
+		.pb-mobile-#{$name} {
+			padding-bottom: $value;
+		}
+		.pl-mobile-#{$name} {
+			padding-left: $value;
+		}
+		.px-mobile-#{$name} {
+			padding-right: $value;
+			padding-left: $value;
+		}
+		.py-mobile-#{$name} {
+			padding-top: $value;
+			padding-bottom: $value;
+		}
+
+		.m-mobile-#{$name} {
+			margin: $value;
+		}
+		.mt-mobile-#{$name} {
+			margin-top: $value;
+		}
+		.mr-mobile-#{$name} {
+			margin-right: $value;
+		}
+		.mb-mobile-#{$name} {
+			margin-bottom: $value;
+		}
+		.ml-mobile-#{$name} {
+			margin-left: $value;
+		}
+		.mx-mobile-#{$name} {
+			margin-right: $value;
+			margin-left: $value;
+		}
+		.my-mobile-#{$name} {
+			margin-top: $value;
+			margin-bottom: $value;
+		}
+	}
+
+	.m-mobile-auto {
+		margin: auto;
+	}
+	.mt-mobile-auto {
+		margin-top: auto;
+	}
+	.mr-mobile-auto {
+		margin-right: auto;
+	}
+	.mb-mobile-auto {
+		margin-bottom: auto;
+	}
+	.ml-mobile-auto {
+		margin-left: auto;
+	}
+	.mx-mobile-auto {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.my-mobile-auto {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+// Presets (Combos)
+.p-page {
+	padding: $spacing-6;
+
+	@include mobile {
+		padding: $spacing-5;
+	}
+}
+
+.px-page {
+	padding-right: $spacing-6;
+	padding-left: $spacing-6;
+
+	@include mobile {
+		padding-right: $spacing-5;
+		padding-left: $spacing-5;
+	}
+}
+
+.p-card {
+	padding: $spacing-6;
+
+	@include mobile {
+		padding: $spacing-4;
+	}
+}
+
+.p-section {
+	padding: $spacing-12 $spacing-6 $spacing-12 $spacing-6;
+
+	@include mobile {
+		padding-top: $spacing-8;
+		padding-bottom: $spacing-8;
+	}
+}
+
+.p-compact {
+	padding: $spacing-2;
+}

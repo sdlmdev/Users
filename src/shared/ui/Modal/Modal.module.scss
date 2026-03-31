@@ -1,0 +1,57 @@
+.overlay {
+	@include animate-overlay;
+
+	position: fixed;
+	z-index: $z-index-modal;
+	padding: $spacing-4;
+	background: $color-overlay;
+	inset: 0;
+	backdrop-filter: blur(4px);
+}
+
+.dialog {
+	position: relative;
+	width: 100%;
+	border: $border-thin solid $color-border;
+	border-radius: $radius-lg;
+	box-shadow: $shadow-modal;
+	background: $color-bg-surface;
+
+	@include animate-modal;
+
+	&.sm {
+		max-width: $container-xs;
+	}
+	&.md {
+		max-width: $container-sm;
+	}
+	&.lg {
+		max-width: $container-lg;
+	}
+}
+
+.header {
+	padding: $spacing-5 $spacing-6;
+	border-bottom: $border-thin solid $color-border-soft;
+}
+
+.title {
+	flex: 1;
+}
+
+.body {
+	padding: $spacing-6;
+}
+
+.footer {
+	padding: $spacing-4 $spacing-6;
+	border-top: $border-thin solid $color-border-soft;
+	border-radius: 0 0 $radius-lg $radius-lg;
+	background: $color-bg-surface;
+
+	@include mobile {
+		& > button {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+
+.ring {
+	display: block;
+	border: $border-thick solid transparent;
+	border-radius: 50%;
+	animation: spin 0.7s linear infinite;
+}
+
+.primary {
+	border-color: $color-accent-light;
+	border-top-color: $color-accent;
+}
+
+.white {
+	border-top-color: $color-white-card-bg;
+}
+
+.sm {
+	@include size(20px, 20px);
+}
+
+.md {
+	@include size(32px, 32px);
+}
+
+.lg {
+	@include size(48px, 48px);
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

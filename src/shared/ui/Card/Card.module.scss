@@ -1,0 +1,36 @@
+.card {
+	@include flex-column;
+	border: $border-thin solid $color-border-soft;
+	border-radius: $radius-lg;
+	background: $color-bg-surface;
+	transition:
+		border-color $transition-base,
+		box-shadow $transition-base,
+		transform $transition-base;
+}
+
+.default {
+	border-color: $color-border-soft;
+	background: $color-bg-surface;
+}
+
+.subtle {
+	border-color: $color-border-soft;
+	background: $color-bg-subtle;
+}
+
+.dashed {
+	border-style: dashed;
+	background: $color-bg-subtle;
+}
+
+.transparent {
+	border-color: transparent;
+	background: transparent;
+}
+
+.hoverable:hover {
+	border-color: $color-border-strong;
+	box-shadow: $shadow-lg;
+	transform: translateY(-2px);
+}

@@ -1,0 +1,17 @@
+.root {
+	min-height: 100vh;
+	text-align: center;
+}
+
+.errorDetails {
+	overflow-x: auto;
+	padding: $spacing-4;
+	max-width: 80vw;
+	border-radius: $radius-base;
+	background: $color-bg-subtle;
+	color: $color-danger;
+	font-size: $font-size-xs;
+	font-family: monospace;
+	white-space: pre-wrap;
+	word-break: break-all;
+}

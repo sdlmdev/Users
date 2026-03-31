@@ -1,0 +1,156 @@
+.button {
+	display: inline-flex;
+	position: relative;
+	border: $border-thin solid transparent;
+	border-radius: $radius-base;
+	text-decoration: none;
+	white-space: nowrap;
+	transition:
+		background-color $transition-fast,
+		border-color $transition-fast,
+		box-shadow $transition-fast,
+		opacity $transition-fast,
+		transform 100ms ease;
+	user-select: none;
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	&:active:not(:disabled) {
+		transform: scale(0.97);
+	}
+
+	&:disabled {
+		opacity: $opacity-disabled;
+		cursor: not-allowed;
+	}
+}
+
+.primary {
+	border-color: $color-accent;
+	background-color: $color-accent;
+	color: $color-text-white;
+
+	&:hover:not(:disabled) {
+		border-color: $color-accent-hover;
+		box-shadow: 0 4px 16px $color-accent-glow;
+		background-color: $color-accent-hover;
+	}
+}
+
+.secondary {
+	border-color: $color-border;
+	background-color: $color-white-subtle;
+	color: $color-text-secondary;
+
+	&:hover:not(:disabled) {
+		border-color: $color-border-hover;
+		background-color: $color-border-soft;
+		color: $color-text-primary;
+	}
+}
+
+.success {
+	border-color: color-mix(in srgb, $color-success 30%, transparent);
+	background-color: color-mix(in srgb, $color-success 14%, transparent);
+	color: $color-success;
+
+	&:hover:not(:disabled) {
+		border-color: color-mix(in srgb, $color-success 50%, transparent);
+		background-color: color-mix(in srgb, $color-success 20%, transparent);
+	}
+}
+
+.warning {
+	border-color: color-mix(in srgb, $color-warning 30%, transparent);
+	background-color: color-mix(in srgb, $color-warning 14%, transparent);
+	color: $color-warning;
+
+	&:hover:not(:disabled) {
+		border-color: color-mix(in srgb, $color-warning 50%, transparent);
+		background-color: color-mix(in srgb, $color-warning 20%, transparent);
+	}
+}
+
+.error {
+	border-color: color-mix(in srgb, $color-danger 30%, transparent);
+	background-color: color-mix(in srgb, $color-danger 14%, transparent);
+	color: $color-danger;
+
+	&:hover:not(:disabled) {
+		border-color: color-mix(in srgb, $color-danger 50%, transparent);
+		background-color: color-mix(in srgb, $color-danger 20%, transparent);
+	}
+}
+
+.info {
+	border-color: color-mix(in srgb, $color-info 30%, transparent);
+	background-color: color-mix(in srgb, $color-info 14%, transparent);
+	color: $color-info;
+
+	&:hover:not(:disabled) {
+		border-color: color-mix(in srgb, $color-info 50%, transparent);
+		background-color: color-mix(in srgb, $color-info 20%, transparent);
+	}
+}
+
+.ghost {
+	border-color: transparent;
+	background-color: transparent;
+	color: $color-text-secondary;
+
+	&:hover:not(:disabled) {
+		background-color: $color-border-soft;
+		color: $color-text-primary;
+	}
+}
+
+.outline {
+	border-color: $color-border-strong;
+	background-color: transparent;
+	color: $color-text-primary;
+
+	&:hover:not(:disabled) {
+		border-color: $color-border-hover;
+		background-color: $color-border-soft;
+	}
+}
+
+.sm {
+	padding: 0 $spacing-3;
+	height: $size-btn-sm;
+	border-radius: $radius-sm;
+}
+
+.md {
+	padding: 0 $spacing-4;
+	height: $size-btn-md;
+}
+
+.lg {
+	padding: 0 $spacing-6;
+	height: $size-btn-lg;
+}
+
+.iconOnly {
+	&.sm {
+		@include size($size-btn-sm, $size-btn-sm);
+
+		padding: 0;
+	}
+	&.md {
+		@include size($size-btn-md, $size-btn-md);
+
+		padding: 0;
+	}
+	&.lg {
+		@include size($size-btn-lg, $size-btn-lg);
+
+		padding: 0;
+	}
+}
+
+.isRound {
+	border-radius: $radius-full;
+}

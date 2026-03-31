@@ -1,0 +1,118 @@
+.tableWrapper {
+	overflow-x: auto;
+	width: 100%;
+	border: $border-thin solid $color-border-soft;
+	border-radius: $radius-lg;
+	-webkit-overflow-scrolling: touch;
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+
+	@include mobile {
+		min-width: $container-md;
+	}
+}
+
+.thead {
+	background: $color-white-subtle;
+}
+
+%th {
+	padding: $spacing-4;
+	border-bottom: $border-thin solid $color-border-soft;
+	background: $color-bg-deep;
+	text-align: left;
+	white-space: nowrap;
+	transition: color $transition-fast;
+	cursor: pointer;
+	user-select: none;
+
+	@include mobile {
+		padding: $spacing-3 $spacing-2;
+	}
+}
+
+.th {
+	@extend %th;
+}
+
+.thNum {
+	@extend %th;
+
+	width: 3.5rem;
+	text-align: center;
+	cursor: default;
+}
+
+.thAction {
+	@extend %th;
+
+	width: 5.5rem;
+	text-align: center;
+	cursor: default;
+}
+
+.sortIcon {
+	color: $color-text-muted;
+	transition: color $transition-fast;
+
+	&.sortActive {
+		color: $color-accent;
+	}
+}
+
+.row {
+	border-bottom: $border-thin solid $color-white-card-border;
+	transition: background-color $transition-fast;
+
+	&:hover {
+		background: $color-accent-subtle;
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	&:nth-child(even) {
+		background: $color-white-extra-subtle;
+
+		&:hover {
+			background: $color-accent-subtle;
+		}
+	}
+}
+
+%td {
+	padding: $spacing-4;
+	vertical-align: middle;
+
+	@include mobile {
+		padding: $spacing-3 $spacing-2;
+	}
+}
+
+.td {
+	@extend %td;
+}
+
+.tdNum {
+	@extend %td;
+
+	text-align: center;
+}
+
+.tdAction {
+	@extend %td;
+
+	text-align: center;
+}
+
+.empty {
+	padding: $spacing-16 $spacing-8;
+}
+
+.emptyIcon {
+	color: $color-text-muted;
+}

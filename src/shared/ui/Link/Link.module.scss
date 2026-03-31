@@ -1,0 +1,39 @@
+.link {
+	display: inline-flex;
+	align-items: center;
+	gap: $spacing-1;
+	outline: none;
+	text-decoration: none;
+	transition:
+		color $transition-fast,
+		transform $transition-fast,
+		opacity $transition-fast;
+	cursor: pointer;
+
+	* {
+		cursor: inherit;
+	}
+
+	&:focus-visible {
+		border-radius: $radius-xs;
+		box-shadow: 0 0 0 2px $color-accent-soft;
+	}
+
+	&.primary {
+		color: $color-accent;
+
+		&:hover {
+			color: $color-accent-hover;
+			text-decoration: underline;
+		}
+	}
+
+	&.subtle {
+		color: $color-text-secondary;
+
+		&:hover {
+			color: $color-accent-soft;
+			transform: translateY(-1px);
+		}
+	}
+}

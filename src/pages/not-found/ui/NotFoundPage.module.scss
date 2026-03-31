@@ -1,0 +1,13 @@
+.page {
+	min-height: 80vh;
+}
+
+.content {
+	max-width: $container-sm;
+}
+
+.code {
+	background: $color-accent-gradient;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

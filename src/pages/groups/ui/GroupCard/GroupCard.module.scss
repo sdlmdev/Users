@@ -1,0 +1,47 @@
+.iconWrap {
+	flex-shrink: 0;
+	border-radius: $radius-base + 2;
+	box-shadow: $shadow-icon;
+	background: var(--group-gradient, #{$color-accent});
+}
+
+.groupDesc {
+	min-height: 3.5rem;
+}
+
+.progressTrack {
+	position: relative;
+	overflow: hidden;
+	height: 0.375rem;
+	border-radius: $radius-full;
+	background: $color-white-extra-subtle;
+}
+
+.progressFill {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: $radius-full;
+	background: var(--group-gradient, #{$color-accent});
+	transition: width $transition-slow cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.membersList {
+	border-top: $border-thin solid $color-white-card-border;
+}
+
+.memberChip {
+	border-radius: $radius-full;
+	background: $color-white-subtle;
+	transition: background-color $transition-fast;
+
+	&:hover {
+		background: $color-white-extra-subtle;
+	}
+}
+
+.avatar {
+	border-radius: $radius-full;
+	background: var(--group-gradient, #{$color-accent});
+}

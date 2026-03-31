@@ -1,0 +1,9 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: $z-index-sticky;
+	height: $layout-bar-height;
+	border-bottom: $border-thin solid $color-border-soft;
+	background: $color-header-bg;
+	backdrop-filter: blur(16px);
+}

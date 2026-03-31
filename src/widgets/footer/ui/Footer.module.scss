@@ -1,0 +1,7 @@
+.footer {
+	position: relative;
+	z-index: $z-index-base;
+	height: $layout-bar-height;
+	border-top: $border-thin solid $color-border-soft;
+	background: $color-bg-deep;
+}

@@ -1,0 +1,64 @@
+.navList {
+	&.desktop {
+		@include tablet-sm {
+			display: none;
+		}
+	}
+
+	&.mobile {
+		width: 100%;
+	}
+}
+
+.link {
+	display: block;
+	position: relative;
+	padding: $spacing-2 $spacing-4;
+	border-radius: $radius-base;
+	text-decoration: none;
+	transition:
+		color $transition-fast,
+		background-color $transition-fast;
+
+	&:hover {
+		background: $color-border-soft;
+		color: $color-text-primary;
+	}
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	&.active {
+		background: $color-accent-light;
+		color: $color-accent-soft;
+	}
+}
+
+.mobileLink {
+	display: block;
+	padding: $spacing-3 $spacing-4;
+	border-radius: $radius-md;
+	text-decoration: none;
+	transition:
+		color $transition-fast,
+		background-color $transition-fast;
+
+	&:hover {
+		background: $color-border-soft;
+		color: $color-text-primary;
+	}
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	&.mobileLinkActive {
+		background: $color-accent-light;
+
+		&:hover {
+			background: $color-accent-active-subtle;
+			color: $color-accent-soft;
+		}
+	}
+}

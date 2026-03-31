@@ -1,0 +1,42 @@
+.badge {
+	display: inline-flex;
+	border: $border-thin solid transparent;
+	border-radius: $radius-full;
+	white-space: nowrap;
+}
+
+.accent {
+	border-color: $color-accent-border-soft;
+	background: $color-accent-light;
+	color: $color-accent;
+}
+
+.success {
+	border-color: color-mix(in srgb, $color-success 30%, transparent);
+	background: color-mix(in srgb, $color-success 14%, transparent);
+	color: $color-success;
+}
+
+.warning {
+	border-color: color-mix(in srgb, $color-warning 30%, transparent);
+	background: color-mix(in srgb, $color-warning 14%, transparent);
+	color: $color-warning;
+}
+
+.info {
+	border-color: color-mix(in srgb, $color-info 30%, transparent);
+	background: color-mix(in srgb, $color-info 14%, transparent);
+	color: $color-info;
+}
+
+.pink {
+	border-color: color-mix(in srgb, $color-pink 30%, transparent);
+	background: color-mix(in srgb, $color-pink 14%, transparent);
+	color: $color-pink;
+}
+
+.gray {
+	border-color: $color-border;
+	background: $color-white-card-border;
+	color: $color-text-muted;
+}

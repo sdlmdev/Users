@@ -1,0 +1,12 @@
+.accent {
+	background: $gradient-hero;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.statValue {
+	background: $color-accent-gradient;
+	background-clip: text;
+	color: $color-accent-soft;
+	-webkit-text-fill-color: transparent;
+}

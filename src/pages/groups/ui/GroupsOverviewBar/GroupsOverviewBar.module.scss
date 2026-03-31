@@ -1,0 +1,18 @@
+.bar {
+	overflow: hidden;
+	height: 0.5rem;
+	border-radius: $radius-full;
+	background: $color-bg-surface;
+}
+
+.segment {
+	min-width: $spacing-1;
+	height: 100%;
+	border-radius: $radius-full;
+	background: var(--group-gradient, #{$gradient-ungrouped});
+	transition: opacity $transition-base;
+
+	&:hover {
+		opacity: $opacity-hover;
+	}
+}

@@ -1,0 +1,20 @@
+.logo {
+	display: block;
+	text-decoration: none;
+
+	&:hover .logoText {
+		color: $color-accent-hover;
+	}
+}
+
+.logoIcon {
+	flex-shrink: 0;
+	border-radius: $radius-base + 2;
+	box-shadow: 0 4px 12px $color-accent-glow;
+	background: $color-accent-gradient;
+	color: $color-text-white;
+}
+
+.logoText {
+	transition: color $transition-fast;
+}

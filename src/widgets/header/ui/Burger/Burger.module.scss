@@ -1,0 +1,55 @@
+.burgerWrapper {
+	display: none;
+	padding: 0;
+	border-radius: $radius-base;
+	color: $color-text-secondary;
+	transition: background-color $transition-fast;
+
+	@include size(40px, 40px);
+
+	& > span {
+		display: block;
+		position: relative;
+
+		@include size(100%, 100%);
+	}
+
+	&:hover {
+		background: $color-border-soft;
+		color: $color-text-primary;
+	}
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	@include tablet-sm {
+		display: flex;
+	}
+}
+
+.burgerLine {
+	@include size(22px, 2px);
+
+	display: block;
+	border-radius: 2px;
+	background: currentcolor;
+	transition:
+		transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
+		opacity $transition-base;
+}
+
+.burgerWrapper[data-open='true'] {
+	.burgerLine:nth-child(1) {
+		transform: translateY(0.375rem) rotate(45deg);
+	}
+
+	.burgerLine:nth-child(2) {
+		opacity: 0;
+		transform: scaleX(0);
+	}
+
+	.burgerLine:nth-child(3) {
+		transform: translateY(-0.375rem) rotate(-45deg);
+	}
+}

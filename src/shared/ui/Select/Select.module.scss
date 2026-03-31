@@ -1,0 +1,71 @@
+.selectWrapper {
+	position: relative;
+}
+
+.select {
+	appearance: none;
+	padding: 0 $spacing-3-5;
+	width: 100%;
+	height: $size-btn-md;
+	border: $border-thin solid $color-border;
+	border-radius: $radius-base;
+	outline: none;
+	background: $color-bg-surface;
+	color: $color-text-primary;
+	font-size: $font-size-sm;
+	font-family: inherit;
+	transition:
+		border-color $transition-fast,
+		box-shadow $transition-fast;
+	cursor: pointer;
+
+	@include mobile {
+		height: $size-touch-min;
+	}
+
+	&.sm {
+		height: $size-btn-sm;
+		font-size: $font-size-xs;
+	}
+
+	&.lg {
+		height: $size-btn-lg;
+		font-size: $font-size-md;
+	}
+
+	&:hover:not(:disabled):not(:focus) {
+		border-color: $color-border-hover;
+	}
+
+	&:focus {
+		border-color: $color-accent;
+		box-shadow: 0 0 0 $border-thick $color-accent-light;
+	}
+
+	&:disabled {
+		opacity: $opacity-disabled;
+		cursor: not-allowed;
+	}
+
+	&.error {
+		border-color: $color-danger;
+
+		&:focus {
+			box-shadow: 0 0 0 $border-thick $color-danger-light;
+		}
+	}
+
+	option {
+		background: $color-bg-surface;
+		color: $color-text-primary;
+	}
+}
+
+.chevron {
+	@include size($spacing-4, $spacing-4);
+
+	position: absolute;
+	right: $spacing-3;
+	pointer-events: none;
+	transition: color $transition-fast;
+}

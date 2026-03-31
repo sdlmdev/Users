@@ -1,0 +1,78 @@
+.inputWrapper {
+	position: relative;
+
+	&.hasError .input {
+		border-color: $color-danger-border-strong;
+
+		&:focus {
+			border-color: $color-danger;
+			box-shadow: 0 0 0 3px $color-danger-light;
+		}
+	}
+}
+
+.input {
+	@include size(100%, $size-btn-md);
+
+	padding: 0 $spacing-4;
+	border: $border-thin solid $color-border;
+	border-radius: $radius-base;
+	outline: none;
+	background: $color-bg-surface;
+	color: $color-text-primary;
+	font-size: $font-size-sm;
+	transition:
+		border-color $transition-fast,
+		box-shadow $transition-fast;
+
+	@include mobile {
+		min-height: $size-touch-min;
+	}
+
+	&::placeholder {
+		color: $color-text-muted;
+	}
+
+	&:hover {
+		border-color: $color-border-hover;
+	}
+
+	&:focus {
+		border-color: $color-accent;
+		box-shadow: 0 0 0 3px $color-accent-light;
+	}
+
+	&.withLeft {
+		padding-left: $spacing-10;
+	}
+
+	&.withRight {
+		padding-right: $spacing-10;
+	}
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	color: $color-text-muted;
+	transform: translateY(-50%);
+	pointer-events: none;
+
+	&.left {
+		left: $spacing-3;
+	}
+
+	&.right {
+		right: $spacing-3;
+	}
+
+	&.iconClickable {
+		cursor: pointer;
+		pointer-events: auto;
+	}
+}
+
+.error {
+	color: $color-danger;
+	font-size: $font-size-xs;
+}

@@ -1,0 +1,32 @@
+.errorBox {
+	padding: $spacing-2-5 $spacing-3;
+	border: $border-thin solid $color-danger-border;
+	border-radius: $radius-base;
+	background: $color-danger-light;
+	color: $color-danger;
+	transition: transform $transition-base;
+}
+
+.errorIcon {
+	flex-shrink: 0;
+	margin-top: 1px;
+}
+
+.errorMessage {
+	color: inherit;
+	font-weight: $font-weight-medium;
+	line-height: $line-height-tight;
+}
+
+.actions {
+	margin-top: $spacing-2;
+
+	@include mobile {
+		flex-direction: column-reverse;
+		align-items: stretch;
+
+		& > button {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+coverage
+.vite
+.idea
+.vscode
+.husky
+package-lock.json
+public
+*.tsbuildinfo
+server

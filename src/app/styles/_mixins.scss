@@ -1,0 +1,93 @@
+@forward 'variables';
+
+@use 'variables' as *;
+
+@mixin mobile {
+	@media (width <= 640px) {
+		@content;
+	}
+}
+
+@mixin mobile-sm {
+	@media (width <= 480px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (width <= 1024px) {
+		@content;
+	}
+}
+
+@mixin tablet-sm {
+	@media (width <= 768px) {
+		@content;
+	}
+}
+
+@mixin flex($direction: row, $align: center, $justify: flex-start, $gap: 0) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+
+	@if $gap != 0 {
+		gap: $gap;
+	}
+}
+
+@mixin flex-center {
+	@include flex(row, center, center);
+}
+
+@mixin flex-between {
+	@include flex(row, center, space-between);
+}
+
+@mixin flex-column($align: stretch, $justify: flex-start, $gap: 0) {
+	@include flex(column, $align, $justify, $gap);
+}
+
+@mixin size($w, $h: $w) {
+	width: $w;
+	height: $h;
+}
+
+@mixin glass-card {
+	border: $border-thin solid $color-danger-border;
+	border-radius: $radius-lg;
+	box-shadow: $shadow-md;
+	background: $color-bg-surface;
+	backdrop-filter: blur(12px);
+}
+
+@mixin focus-ring {
+	outline: $border-thin solid $color-accent;
+	outline-offset: $border-medium;
+}
+
+@mixin truncate {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin container {
+	margin: 0 auto;
+	padding: 0 $spacing-6;
+	width: 100%;
+	max-width: $container-max-width;
+
+	@include mobile {
+		padding: 0 $spacing-4;
+	}
+}
+
+@mixin animate-overlay($duration: 200ms) {
+	animation: fade-in $duration ease forwards;
+}
+
+@mixin animate-modal($duration: 250ms) {
+	animation: slide-up $duration cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}

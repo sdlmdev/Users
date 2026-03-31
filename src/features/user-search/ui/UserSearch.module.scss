@@ -1,0 +1,8 @@
+.clearBtnWrapper {
+	opacity: $opacity-muted;
+	transition: opacity $transition-fast;
+
+	&:hover {
+		opacity: $opacity-visible;
+	}
+}
