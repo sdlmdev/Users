@@ -17,9 +17,9 @@ export const WelcomePage = () => {
 
 			try {
 				const data = await getStats();
+
 				setStats(data);
-			} catch (err) {
-				console.error('Failed to load stats:', err);
+			} catch {
 				setStats({ usersCount: 0, groupsCount: 0 });
 			} finally {
 				setIsLoading(false);

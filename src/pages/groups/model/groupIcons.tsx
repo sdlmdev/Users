@@ -2,6 +2,10 @@ import { Briefcase, Crown, Handshake, Megaphone, Monitor, User as UserIcon } fro
 import { UserGroup } from '@entities/user';
 import { ICON_SIZE } from '@shared/const';
 
+interface GroupIconProps {
+	group: UserGroup;
+}
+
 export const ManagementIcon = () => <Crown width={ICON_SIZE.MD} height={ICON_SIZE.MD} />;
 export const AccountingIcon = () => <Briefcase width={ICON_SIZE.MD} height={ICON_SIZE.MD} />;
 export const HRIcon = () => <Handshake width={ICON_SIZE.MD} height={ICON_SIZE.MD} />;
@@ -16,10 +20,6 @@ const ICON_MAP: Record<UserGroup, typeof ManagementIcon> = {
 	[UserGroup.IT]: ITIcon,
 	[UserGroup.MARKETING]: MarketingIcon,
 };
-
-interface GroupIconProps {
-	group: UserGroup;
-}
 
 export const GroupIcon = ({ group }: GroupIconProps) => {
 	const Icon = ICON_MAP[group] || FallbackIcon;

@@ -6,20 +6,11 @@ import styles from './Modal.module.scss';
 export interface ModalHeaderProps {
 	title: string;
 	onClose?: VoidFunction;
-	className?: string;
 }
 
-export const ModalHeader = ({ title, onClose, className }: ModalHeaderProps) => (
-	<Stack
-		direction="row"
-		align="center"
-		justify="between"
-		isFullWidth
-		className={cn(styles.header, className)}
-	>
-		<div className={cn(styles.title)}>
-			<Typography variant="h2">{title}</Typography>
-		</div>
+export const ModalHeader = ({ title, onClose }: ModalHeaderProps) => (
+	<Stack direction="row" align="center" justify="between" isFullWidth className={cn(styles.header)}>
+		<Typography variant="h2">{title}</Typography>
 		{onClose && (
 			<Button
 				variant="ghost"

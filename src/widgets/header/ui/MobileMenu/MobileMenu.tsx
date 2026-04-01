@@ -8,7 +8,7 @@ import styles from './MobileMenu.module.scss';
 
 interface MobileMenuProps {
 	isOpen: boolean;
-	onClose: () => void;
+	onClose: VoidFunction;
 }
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {

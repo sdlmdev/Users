@@ -1,7 +1,6 @@
 .link {
 	display: inline-flex;
 	align-items: center;
-	gap: $spacing-1;
 	outline: none;
 	text-decoration: none;
 	transition:
@@ -9,6 +8,7 @@
 		transform $transition-fast,
 		opacity $transition-fast;
 	cursor: pointer;
+	gap: $spacing-1;
 
 	* {
 		cursor: inherit;

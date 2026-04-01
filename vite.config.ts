@@ -4,8 +4,8 @@ import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), '');
-	const isGhPages = env.VITE_APP_GH_PAGES === 'true';
-	const base = isGhPages ? '/Users/' : '/';
+	const isProd = mode === 'production';
+	const base = isProd ? '/Users/' : '/';
 
 	return {
 		base,

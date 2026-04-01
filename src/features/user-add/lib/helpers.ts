@@ -1,16 +1,5 @@
 import type { CreateUserDto } from '@entities/user';
 
-export const REQUIRED_FIELD_ERROR = 'Обязательное поле';
-export const INVALID_EMAIL_ERROR = 'Некорректный email';
-export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-export const EMPTY_FORM: CreateUserDto = {
-	firstName: '',
-	lastName: '',
-	email: '',
-	group: null,
-};
-
 export type FormErrors = Partial<Record<keyof CreateUserDto, string>>;
 
 export interface ActionState {
@@ -21,6 +10,17 @@ export interface ActionState {
 export const INITIAL_STATE: ActionState = {
 	errors: {},
 	submitError: null,
+};
+
+const REQUIRED_FIELD_ERROR = 'Обязательное поле';
+const INVALID_EMAIL_ERROR = 'Некорректный email';
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export const EMPTY_FORM: CreateUserDto = {
+	firstName: '',
+	lastName: '',
+	email: '',
+	group: null,
 };
 
 export const validateUserForm = (form: CreateUserDto): FormErrors => {

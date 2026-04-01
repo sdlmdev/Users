@@ -26,7 +26,6 @@
 	height: 100%;
 }
 
-// Flex shortcuts
 .flex-1 {
 	flex: 1;
 }
@@ -37,7 +36,6 @@
 	flex: none;
 }
 
-// Grow / Shrink
 .grow-0 {
 	flex-grow: 0;
 }
@@ -51,7 +49,6 @@
 	flex-shrink: 1;
 }
 
-// Wrap
 .wrap {
 	flex-wrap: wrap;
 }
@@ -167,107 +164,126 @@ $spacings: (
 );
 
 @each $name, $value in $spacings {
-	// Gaps
 	.gap-#{$name} {
 		--grid-gap: #{$value};
 		gap: $value;
 	}
 
-	// Paddings
 	.p-#{$name} {
 		padding: $value;
 	}
+
 	.pt-#{$name} {
 		padding-top: $value;
 	}
+
 	.pr-#{$name} {
 		padding-right: $value;
 	}
+
 	.pb-#{$name} {
 		padding-bottom: $value;
 	}
+
 	.pl-#{$name} {
 		padding-left: $value;
 	}
+
 	.px-#{$name} {
 		padding-right: $value;
 		padding-left: $value;
 	}
+
 	.py-#{$name} {
 		padding-top: $value;
 		padding-bottom: $value;
 	}
 
-	// Margins base
 	.m-#{$name} {
 		margin: $value;
 	}
+
 	.mt-#{$name} {
 		margin-top: $value;
 	}
+
 	.mr-#{$name} {
 		margin-right: $value;
 	}
+
 	.mb-#{$name} {
 		margin-bottom: $value;
 	}
+
 	.ml-#{$name} {
 		margin-left: $value;
 	}
+
 	.mx-#{$name} {
 		margin-right: $value;
 		margin-left: $value;
 	}
+
 	.my-#{$name} {
 		margin-top: $value;
 		margin-bottom: $value;
 	}
 }
 
-// Auto margins
 .m-auto {
 	margin: auto;
 }
+
 .mt-auto {
 	margin-top: auto;
 }
+
 .mr-auto {
 	margin-right: auto;
 }
+
 .mb-auto {
 	margin-bottom: auto;
 }
+
 .ml-auto {
 	margin-left: auto;
 }
+
 .mx-auto {
 	margin-right: auto;
 	margin-left: auto;
 }
+
 .my-auto {
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
-// Max Widths
 .maxW-tiny {
 	max-width: $container-tiny;
 }
+
 .maxW-xxs {
 	max-width: $container-xxs;
 }
+
 .maxW-xs {
 	max-width: $container-xs;
 }
+
 .maxW-sm {
 	max-width: $container-sm;
 }
+
 .maxW-md {
 	max-width: $container-md;
 }
+
 .maxW-lg {
 	max-width: $container-lg;
 }
+
 .maxW-max {
 	max-width: $container-max-width;
 }
@@ -282,22 +298,28 @@ $spacings: (
 		.p-tablet-#{$name} {
 			padding: $value;
 		}
+
 		.pt-tablet-#{$name} {
 			padding-top: $value;
 		}
+
 		.pr-tablet-#{$name} {
 			padding-right: $value;
 		}
+
 		.pb-tablet-#{$name} {
 			padding-bottom: $value;
 		}
+
 		.pl-tablet-#{$name} {
 			padding-left: $value;
 		}
+
 		.px-tablet-#{$name} {
 			padding-right: $value;
 			padding-left: $value;
 		}
+
 		.py-tablet-#{$name} {
 			padding-top: $value;
 			padding-bottom: $value;
@@ -306,22 +328,28 @@ $spacings: (
 		.m-tablet-#{$name} {
 			margin: $value;
 		}
+
 		.mt-tablet-#{$name} {
 			margin-top: $value;
 		}
+
 		.mr-tablet-#{$name} {
 			margin-right: $value;
 		}
+
 		.mb-tablet-#{$name} {
 			margin-bottom: $value;
 		}
+
 		.ml-tablet-#{$name} {
 			margin-left: $value;
 		}
+
 		.mx-tablet-#{$name} {
 			margin-right: $value;
 			margin-left: $value;
 		}
+
 		.my-tablet-#{$name} {
 			margin-top: $value;
 			margin-bottom: $value;
@@ -331,22 +359,28 @@ $spacings: (
 	.m-tablet-auto {
 		margin: auto;
 	}
+
 	.mt-tablet-auto {
 		margin-top: auto;
 	}
+
 	.mr-tablet-auto {
 		margin-right: auto;
 	}
+
 	.mb-tablet-auto {
 		margin-bottom: auto;
 	}
+
 	.ml-tablet-auto {
 		margin-left: auto;
 	}
+
 	.mx-tablet-auto {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	.my-tablet-auto {
 		margin-top: auto;
 		margin-bottom: auto;
@@ -363,22 +397,28 @@ $spacings: (
 		.p-mobile-#{$name} {
 			padding: $value;
 		}
+
 		.pt-mobile-#{$name} {
 			padding-top: $value;
 		}
+
 		.pr-mobile-#{$name} {
 			padding-right: $value;
 		}
+
 		.pb-mobile-#{$name} {
 			padding-bottom: $value;
 		}
+
 		.pl-mobile-#{$name} {
 			padding-left: $value;
 		}
+
 		.px-mobile-#{$name} {
 			padding-right: $value;
 			padding-left: $value;
 		}
+
 		.py-mobile-#{$name} {
 			padding-top: $value;
 			padding-bottom: $value;
@@ -387,22 +427,28 @@ $spacings: (
 		.m-mobile-#{$name} {
 			margin: $value;
 		}
+
 		.mt-mobile-#{$name} {
 			margin-top: $value;
 		}
+
 		.mr-mobile-#{$name} {
 			margin-right: $value;
 		}
+
 		.mb-mobile-#{$name} {
 			margin-bottom: $value;
 		}
+
 		.ml-mobile-#{$name} {
 			margin-left: $value;
 		}
+
 		.mx-mobile-#{$name} {
 			margin-right: $value;
 			margin-left: $value;
 		}
+
 		.my-mobile-#{$name} {
 			margin-top: $value;
 			margin-bottom: $value;
@@ -412,29 +458,34 @@ $spacings: (
 	.m-mobile-auto {
 		margin: auto;
 	}
+
 	.mt-mobile-auto {
 		margin-top: auto;
 	}
+
 	.mr-mobile-auto {
 		margin-right: auto;
 	}
+
 	.mb-mobile-auto {
 		margin-bottom: auto;
 	}
+
 	.ml-mobile-auto {
 		margin-left: auto;
 	}
+
 	.mx-mobile-auto {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	.my-mobile-auto {
 		margin-top: auto;
 		margin-bottom: auto;
 	}
 }
 
-// Presets (Combos)
 .p-page {
 	padding: $spacing-6;
 

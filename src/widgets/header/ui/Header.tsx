@@ -25,11 +25,9 @@ export const Header = () => {
 
 	return (
 		<>
-			<header className={styles.header}>
+			<Stack as="header" className={styles.header} isFullWidth>
 				<Stack
-					direction="row"
-					justify="between"
-					align="center"
+					variant="row-between"
 					isFullWidth
 					isFullHeight
 					maxWidth="max"
@@ -37,12 +35,10 @@ export const Header = () => {
 					px={{ base: 6, mobile: 4 }}
 				>
 					<Logo />
-
 					<NavList />
-
 					<Burger isOpen={isMenuOpen} onClick={toggleMenu} />
 				</Stack>
-			</header>
+			</Stack>
 
 			<MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
 		</>

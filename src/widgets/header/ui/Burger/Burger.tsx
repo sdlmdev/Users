@@ -3,7 +3,7 @@ import styles from './Burger.module.scss';
 
 interface BurgerProps {
 	isOpen: boolean;
-	onClick: () => void;
+	onClick: VoidFunction;
 }
 
 export const Burger = ({ isOpen, onClick }: BurgerProps) => (

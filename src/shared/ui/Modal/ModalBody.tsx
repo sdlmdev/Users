@@ -5,11 +5,10 @@ import styles from './Modal.module.scss';
 
 export interface ModalBodyProps {
 	children: ReactNode;
-	className?: string;
 }
 
-export const ModalBody = ({ children, className }: ModalBodyProps) => (
-	<Stack direction="column" className={cn(styles.body, className)}>
+export const ModalBody = ({ children }: ModalBodyProps) => (
+	<Stack direction="column" className={cn(styles.body)}>
 		{children}
 	</Stack>
 );

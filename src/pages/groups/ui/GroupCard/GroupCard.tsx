@@ -22,7 +22,6 @@ interface GroupCardProps {
 
 export const GroupCard = ({ group, total }: GroupCardProps) => {
 	const { name: groupName, members } = group;
-
 	let name: string;
 	let description: string;
 	let cardClass: string;

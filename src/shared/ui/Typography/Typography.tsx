@@ -19,7 +19,6 @@ export const Typography = ({
 }: TypographyProps) => {
 	const Tag = as || variantToTag[variant];
 	const defaults = variantDefaults[variant];
-
 	const color = propColor ?? defaults.color ?? 'inherit';
 	const size = propSize ?? defaults.size;
 	const weight = propWeight ?? defaults.weight;

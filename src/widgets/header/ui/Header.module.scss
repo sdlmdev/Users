@@ -1,7 +1,7 @@
 .header {
 	position: sticky;
-	top: 0;
 	z-index: $z-index-sticky;
+	top: 0;
 	height: $layout-bar-height;
 	border-bottom: $border-thin solid $color-border-soft;
 	background: $color-header-bg;

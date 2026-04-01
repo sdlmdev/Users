@@ -25,7 +25,6 @@ export type TypographyColor =
 	| 'inherit';
 
 export type TypographyWeight = 'normal' | 'medium' | 'semibold' | 'bold';
-
 export type TypographySize = AppSize;
 
 export type TypographyTag =

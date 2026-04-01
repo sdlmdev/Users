@@ -9,7 +9,9 @@
 		"plugin/no-unsupported-browser-features": [
 			true,
 			{
-				"browsers": ["chrome 84, and_chr 84, ios_saf 14.5, safari 14.1, ff 68, edge 84"],
+				"browsers": [
+					"last 2 versions, > 0.5%, not dead, not op_mini all, not and_uc > 0, not and_qq > 0, not kaios > 0"
+				],
 				"ignore": ["css-nesting", "css-focus-visible", "css-math-functions", "css3-cursors"],
 				"ignorePartialSupport": true,
 				"severity": "warning"
@@ -302,6 +304,7 @@
 			{
 				"ignoreProperties": ["line-clamp"]
 			}
-		]
+		],
+		"scss/dollar-variable-colon-space-after": null
 	}
 }

@@ -10,14 +10,6 @@ export interface DeleteUserModalProps {
 	onDelete: (id: string) => Promise<void>;
 }
 
-const CONFIRM_MODAL_TITLE = 'Удалить пользователя?';
-
-const CONFIRM_MESSAGE =
-	'Это действие необратимо. Пользователь будет удалён из системы безвозвратно.';
-
-const CONFIRM_CANCEL = 'Отмена';
-const CONFIRM_SUBMIT = 'Удалить';
-
 export const DeleteUserModal = ({ isOpen, userId, onClose, onDelete }: DeleteUserModalProps) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
@@ -53,7 +45,7 @@ export const DeleteUserModal = ({ isOpen, userId, onClose, onDelete }: DeleteUse
 
 	return (
 		<Modal isOpen={isOpen} onClose={handleClose} size="sm">
-			<Modal.Header title={CONFIRM_MODAL_TITLE} onClose={handleClose} />
+			<Modal.Header title="Удалить пользователя?" onClose={handleClose} />
 
 			<Modal.Body>
 				<Stack direction="column" align="center" justify="center" gap={5}>
@@ -62,7 +54,7 @@ export const DeleteUserModal = ({ isOpen, userId, onClose, onDelete }: DeleteUse
 					</Stack>
 
 					<Typography variant="p" color="secondary" align="center">
-						{CONFIRM_MESSAGE}
+						Это действие необратимо. Пользователь будет удалён из системы безвозвратно.
 					</Typography>
 
 					{error && (
@@ -75,10 +67,10 @@ export const DeleteUserModal = ({ isOpen, userId, onClose, onDelete }: DeleteUse
 
 			<Modal.Footer>
 				<Button type="button" variant="ghost" onClick={handleClose} disabled={isLoading}>
-					{CONFIRM_CANCEL}
+					Отмена
 				</Button>
 				<Button type="button" variant="error" isLoading={isLoading} onClick={handleConfirmDelete}>
-					{CONFIRM_SUBMIT}
+					Удалить
 				</Button>
 			</Modal.Footer>
 		</Modal>

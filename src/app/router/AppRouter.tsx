@@ -1,12 +1,12 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from '@widgets/layout';
-import { ErrorBoundary } from '@shared/ui/ErrorBoundary';
+import { ErrorBoundary } from '@shared/ui';
 import { routeConfig } from './config';
 
 export const AppRouter = () => {
 	return (
 		<ErrorBoundary>
-			<BrowserRouter>
+			<HashRouter>
 				<Routes>
 					<Route element={<Layout />}>
 						{routeConfig.map(({ path, element, isIndex }) => (
@@ -14,7 +14,7 @@ export const AppRouter = () => {
 						))}
 					</Route>
 				</Routes>
-			</BrowserRouter>
+			</HashRouter>
 		</ErrorBoundary>
 	);
 };

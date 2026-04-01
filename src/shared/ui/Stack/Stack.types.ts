@@ -4,7 +4,6 @@ import type { ContainerSize, MarginKey, PaddingPreset, Responsive, SpacingKey } 
 export type StackDirection = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 export type StackAlign = 'start' | 'center' | 'end' | 'stretch';
 export type StackJustify = 'start' | 'center' | 'end' | 'between';
-
 export type StackVariant = 'row' | 'column' | 'row-center' | 'column-center' | 'row-between';
 
 export type StackElement =

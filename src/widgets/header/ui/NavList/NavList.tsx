@@ -8,7 +8,7 @@ const NAV_LINKS = routeConfig.filter((route) => route.label);
 
 interface NavListProps {
 	variant?: 'desktop' | 'mobile';
-	onLinkClick?: () => void;
+	onLinkClick?: VoidFunction;
 }
 
 const getLinkClass =

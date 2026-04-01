@@ -5,10 +5,9 @@ import styles from './Modal.module.scss';
 
 export interface ModalFooterProps {
 	children: ReactNode;
-	className?: string;
 }
 
-export const ModalFooter = ({ children, className }: ModalFooterProps) => (
+export const ModalFooter = ({ children }: ModalFooterProps) => (
 	<Stack
 		direction="row"
 		align="center"
@@ -16,7 +15,7 @@ export const ModalFooter = ({ children, className }: ModalFooterProps) => (
 		isFullWidth
 		gap={3}
 		directionMobile="column-reverse"
-		className={cn(styles.footer, className)}
+		className={cn(styles.footer)}
 	>
 		{children}
 	</Stack>

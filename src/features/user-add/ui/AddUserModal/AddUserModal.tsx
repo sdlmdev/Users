@@ -12,11 +12,8 @@ interface AddUserModalProps {
 	onSubmit: (data: CreateUserDto) => Promise<void>;
 }
 
-const MODAL_TITLE = 'Добавить пользователя';
-const EMPTY_OPTION_LABEL = 'Без группы';
-
 const SELECT_OPTIONS = [
-	{ value: '', label: EMPTY_OPTION_LABEL },
+	{ value: '', label: 'Без группы' },
 	...GROUPS.map((g) => ({ value: g, label: GROUP_LABELS[g] })),
 ];
 
@@ -54,7 +51,7 @@ export const AddUserModal = ({ isOpen, onClose, onSubmit }: AddUserModalProps) =
 
 	return (
 		<Modal isOpen={isOpen} onClose={handleClose}>
-			<Modal.Header title={MODAL_TITLE} onClose={handleClose} />
+			<Modal.Header title="Добавить пользователя" onClose={handleClose} />
 
 			<Modal.Body>
 				<Form action={action} noValidate id={formId}>

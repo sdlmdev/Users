@@ -42,15 +42,3 @@ export const getComparator = <T>(config: SortConfig<T> | null) => {
 		return config.direction === SORT_DIRECTION_ASC ? cmp : -cmp;
 	};
 };
-
-export const toggleSort = <T>(current: SortConfig<T> | null, key: keyof T): SortConfig<T> => {
-	if (current?.key === key) {
-		return {
-			key,
-			direction:
-				current.direction === SORT_DIRECTION_ASC ? SORT_DIRECTION_DESC : SORT_DIRECTION_ASC,
-		};
-	}
-
-	return { key, direction: SORT_DIRECTION_ASC };
-};
