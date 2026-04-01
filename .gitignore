@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+.pnpm-store/
 
 # Build
 dist/
@@ -12,9 +13,11 @@ build/
 .env.*.local
 
 # Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Editor
 .idea/
@@ -24,6 +27,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+.eslintcache
+.stylelintcache
 
 # Coverage
 coverage/
@@ -32,3 +37,13 @@ test-results/
 
 # Vite
 .vite/
+
+# System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db

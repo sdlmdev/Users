@@ -54,14 +54,6 @@
 	height: $h;
 }
 
-@mixin glass-card {
-	border: $border-thin solid $color-danger-border;
-	border-radius: $radius-lg;
-	box-shadow: $shadow-md;
-	background: $color-bg-surface;
-	backdrop-filter: blur(12px);
-}
-
 @mixin focus-ring {
 	outline: $border-thin solid $color-accent;
 	outline-offset: $border-medium;
@@ -71,17 +63,6 @@
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-}
-
-@mixin container {
-	margin: 0 auto;
-	padding: 0 $spacing-6;
-	width: 100%;
-	max-width: $container-max-width;
-
-	@include mobile {
-		padding: 0 $spacing-4;
-	}
 }
 
 @mixin animate-overlay($duration: 200ms) {
