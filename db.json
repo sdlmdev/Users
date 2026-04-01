@@ -1,0 +1,207 @@
+{
+	"users": [
+		{
+			"id": "1",
+			"firstName": "Александр",
+			"lastName": "Смирнов",
+			"email": "aleksandr.smirnov.1@example.com",
+			"group": null
+		},
+		{
+			"id": "2",
+			"firstName": "Мария",
+			"lastName": "Кузьмин",
+			"email": "mariya.kuzьmin.2@example.com",
+			"group": "it"
+		},
+		{
+			"id": "3",
+			"firstName": "Мария",
+			"lastName": "Гусев",
+			"email": "mariya.gusev.3@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "4",
+			"firstName": "Вера",
+			"lastName": "Кузнецов",
+			"email": "vera.kuznetsov.4@example.com",
+			"group": "accounting"
+		},
+		{
+			"id": "5",
+			"firstName": "Дмитрий",
+			"lastName": "Попов",
+			"email": "dmitriy.popov.5@example.com",
+			"group": null
+		},
+		{
+			"id": "6",
+			"firstName": "Яна",
+			"lastName": "Попов",
+			"email": "yana.popov.6@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "7",
+			"firstName": "Светлана",
+			"lastName": "Киселев",
+			"email": "svetlana.kiselev.7@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "8",
+			"firstName": "Владимир",
+			"lastName": "Григорьев",
+			"email": "vladimir.grigorьev.8@example.com",
+			"group": "management"
+		},
+		{
+			"id": "9",
+			"firstName": "Любовь",
+			"lastName": "Гусев",
+			"email": "lyubovь.gusev.9@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "10",
+			"firstName": "Владимир",
+			"lastName": "Королев",
+			"email": "vladimir.korolev.10@example.com",
+			"group": null
+		},
+		{
+			"id": "11",
+			"firstName": "Инна",
+			"lastName": "Федоров",
+			"email": "inna.fedorov.11@example.com",
+			"group": "accounting"
+		},
+		{
+			"id": "12",
+			"firstName": "Игорь",
+			"lastName": "Ильин",
+			"email": "igorь.ilьin.12@example.com",
+			"group": "management"
+		},
+		{
+			"id": "13",
+			"firstName": "Денис",
+			"lastName": "Смирнов",
+			"email": "denis.smirnov.13@example.com",
+			"group": "management"
+		},
+		{
+			"id": "14",
+			"firstName": "Виктор",
+			"lastName": "Попов",
+			"email": "viktor.popov.14@example.com",
+			"group": null
+		},
+		{
+			"id": "15",
+			"firstName": "Виктория",
+			"lastName": "Гусев",
+			"email": "viktoriya.gusev.15@example.com",
+			"group": "management"
+		},
+		{
+			"id": "16",
+			"firstName": "Анатолий",
+			"lastName": "Федоров",
+			"email": "anatoliy.fedorov.16@example.com",
+			"group": "accounting"
+		},
+		{
+			"id": "17",
+			"firstName": "Марина",
+			"lastName": "Макаров",
+			"email": "marina.makarov.17@example.com",
+			"group": "management"
+		},
+		{
+			"id": "18",
+			"firstName": "Татьяна",
+			"lastName": "Соловьев",
+			"email": "tatьyana.solovьev.18@example.com",
+			"group": "hr"
+		},
+		{
+			"id": "19",
+			"firstName": "Игорь",
+			"lastName": "Кузьмин",
+			"email": "igorь.kuzьmin.19@example.com",
+			"group": "management"
+		},
+		{
+			"id": "20",
+			"firstName": "Анна",
+			"lastName": "Федоров",
+			"email": "anna.fedorov.20@example.com",
+			"group": "it"
+		},
+		{
+			"id": "21",
+			"firstName": "Игорь",
+			"lastName": "Козлов",
+			"email": "igorь.kozlov.21@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "22",
+			"firstName": "Сергей",
+			"lastName": "Лебедев",
+			"email": "sergey.lebedev.22@example.com",
+			"group": "hr"
+		},
+		{
+			"id": "23",
+			"firstName": "Павел",
+			"lastName": "Фролов",
+			"email": "pavel.frolov.23@example.com",
+			"group": null
+		},
+		{
+			"id": "24",
+			"firstName": "Андрей",
+			"lastName": "Соколов",
+			"email": "andrey.sokolov.24@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "25",
+			"firstName": "Марина",
+			"lastName": "Соколов",
+			"email": "marina.sokolov.25@example.com",
+			"group": "it"
+		},
+		{
+			"id": "26",
+			"firstName": "Денис",
+			"lastName": "Кузнецов",
+			"email": "denis.kuznetsov.26@example.com",
+			"group": "marketing"
+		},
+		{
+			"id": "27",
+			"firstName": "Сергей",
+			"lastName": "Воробьев",
+			"email": "sergey.vorobьev.27@example.com",
+			"group": null
+		},
+		{
+			"id": "28",
+			"firstName": "Дарья",
+			"lastName": "Смирнов",
+			"email": "darьya.smirnov.28@example.com",
+			"group": "it"
+		},
+		{
+			"id": "29",
+			"firstName": "Алексей",
+			"lastName": "Ильин",
+			"email": "aleksey.ilьin.29@example.com",
+			"group": "accounting"
+		}
+	]
+}
